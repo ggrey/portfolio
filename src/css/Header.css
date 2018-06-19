@@ -1,0 +1,58 @@
+.header {
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .header > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 1em; */
+  }
+  
+  .header .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header .name {
+    font-size: 2.3em;
+    color: #16F4D0;
+  }
+      
+  .cartoon {
+    height: 230px;
+    margin-top: 1em;
+  }
+
+  .header .intro .heart:after {
+    content: '\f004.';
+    font-family: FontAwesome;
+    color: #fff;
+    font-size: 1em;
+    margin-left: 0.3em;
+    color: red;
+}
+
+@media only screen and (min-width : 768px) {
+    .cartoon {
+        height: 350px;
+        /* margin-right: 0.3em; */
+    }
+
+    .header .name {
+      font-size: 3.5em;
+    }
+
+    .header .details {
+      font-size: 1em;
+    }
+
+    .header .intro {
+      /* width: 70%; */
+      font-size: 1.3em;
+    }
+}

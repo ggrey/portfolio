@@ -1,0 +1,41 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    text-align: end;
+    font-size: 0.8em;
+    font-style: italic;
+    font-family: 'Poiret One', 'sans-serif';
+    border-top: 1px solid #51708f;
+    margin: 1em;
+}
+
+.footer p {
+    font-size: 1em;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer .linked-in::after,
+.footer .github::after,
+.footer .spotify::after {
+    content: '\f0e1';
+    font-family: FontAwesome;
+    color: #fff;
+    font-size: 1.8em;
+}
+
+.footer .github::after {
+    content: '\f113';
+    margin-left: 0.5em;
+}
+
+.footer .spotify::after {
+    content: '\f1bc';
+    margin-left: 0.5em;
+}
+
+
