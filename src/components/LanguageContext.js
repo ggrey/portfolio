@@ -4,8 +4,11 @@ export const languages = {
   en:
     {
         header: {
-            intro: `Crafting code from the tropics, based in beautiful Costa Rica. I work hard so my dog can have a better life. Then I can spend the rest of my money on travel, music and food.\n\nFor the past 6+ years I've had the opportunity to use a wide range of technologies, but C#, NodeJS and React hold a special place in my heart`,
+            intro: "Hi there! I'm a ",
+            occupation: "Full-Stack Web Developer ",
+            intro2: "based San José, Costa Rica and I work hard so my dog can have a better life.\n\nFor the past 6+ years I've had the opportunity to work with a wide range of technologies, but C#, NodeJS and React hold a special place in my heart, just like traveling, good music and eating delicious food",
             details: "I build Web Apps"
+
         },
         experience: {
             intro: `Back-end development is my strongest suit since it was my entry point to programming, though for the last two years I've been working a lot with Javascript (thanks to NodeJS), that eventually led me to my current front-end role.\n\nNow I'm focusing on sharpening my web skills, from design to performance plus looking to get my AWS game ON!.`,
@@ -18,12 +21,19 @@ export const languages = {
         contact: {
             title: 'CONTACT',
             content: "Do you have a cool project in mind or just want to get in touch? Just shoot me a message by filling the form below and I'll get back to you as soon as I can."
+        },
+        menu: {
+            home: "Home",
+            experience: "Experience",
+            contact: "Contact"
         }
     },
     es: {
         header: {
-            intro: `Escribiendo código desde el trópico, viviendo en la hermosa Costa Rica. Trabajo duro para que mi perro pueda tener una mejor vida. Para luego poder gastar el resto de mi dinero en viajes, música y comida.\n\nDurante los últimos 6 años he tenido la oportunidad de utilizar una amplia variedad de tecnologías, pero C#, NodeJS y React tienen un lugar especial en mi corazón`,
-            details: "Construyo Aplicaciones Web"
+            intro: "¡Hola! Soy una ",
+            occupation: "Desarrolladora Web Full-Stack ",
+            intro2: "viviendo en San José, Costa Rica y trabajando duro para que mi perro pueda tener una mejor vida.\n\nDurante los últimos 6+ años he tenido la oportunidad de trabajar con una amplia variedad de tecnologías, pero C#, NodeJS y React tienen un lugar especial en mi corazón, al igual que viajar, la buena música y probar comida deliciosa",
+            details: "Programo Aplicaciones Web"
         },
         experience: {
             intro: "",
@@ -36,6 +46,11 @@ export const languages = {
         contact: {
             title: 'CONTACTO',
             content: "¿Tenés algún proyecto cool en mente o solo querés ponerte en contacto? Solo envíame un mensaje llenando el formuario de abajo y te responderé lo más pronto posible."
+        },
+        menu: {
+            home: "Inicio",
+            experience: "Experiencia",
+            contact: "Contacto"
         }
     }
 }
