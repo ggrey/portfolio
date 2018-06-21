@@ -9,7 +9,7 @@
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-scripts": "1.1.4",
-    "react-scrollable-anchor": "^0.6.1",
+    "react-scrollchor": "^5.1.0",
     "really-smooth-scroll": "^2.1.1"
   },
   "scripts": {

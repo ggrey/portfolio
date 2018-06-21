@@ -6,7 +6,7 @@ import { LanguageContext } from './LanguageContext';
 class Content extends Component {
   render() {
     return (
-      <section className="content" >
+      <section id="experience" className="content" >
         <LanguageContext.Consumer>
           {({ langText }) => (
             <section className="experience-content">

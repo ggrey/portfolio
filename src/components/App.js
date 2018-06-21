@@ -7,13 +7,12 @@ import Header from './Header';
 import Content from './Content';
 import Contact from './Contact';
 import Footer from './Footer';
-import ScrollableAnchor from 'react-scrollable-anchor';
 import { LanguageContext, languages } from './LanguageContext';
 import Separator from './Separator';
 
 ReallySmoothScroll.shim();
 ReallySmoothScroll.config({
-  mousewheelSensitivity: 6,
+  mousewheelSensitivity: 3,
   keydownSensitivity: 6
 });
 
@@ -25,15 +24,14 @@ class App extends Component {
       let { language, langText } = this.state;
       language = language === 'en' ? 'es' : 'en';
       langText = languages[language];
-      console.log({ langText })
       this.setState({ language, langText });
     }
 
     this.state = {
-      visible: false,
       language: 'en',
       langText: languages.en,
-      toggleLanguage: this.toggleLanguage
+      toggleLanguage: this.toggleLanguage,
+      activeLink: 'home'
     }
   }
 
@@ -48,22 +46,26 @@ class App extends Component {
     this.setState({ visible });
   }
 
+  changeActiveLink = (newActiveLink) => {
+    let { activeLink } = this.state;
+    activeLink = newActiveLink;
+    this.setState({activeLink});
+    console.log({activeLink})
+  }
+
   render() {
     return (
       <LanguageContext.Provider value={this.state}>
-        <Menu toggleLanguage={this.toggleLanguage} />
+        <Menu 
+          toggleLanguage={this.toggleLanguage}
+          activeLink={this.state.activeLink}
+          changeActiveLink={this.changeActiveLink}
+          language={this.state.language}
+        />
         <div className="app">
-          <ScrollableAnchor id={'home'}>
             <Header />
-          </ScrollableAnchor>
-          {/* <Separator /> */}
-          <ScrollableAnchor id={'experience'}>
             <Content />
-          </ScrollableAnchor>
-          {/* <Separator /> */}
-          <ScrollableAnchor id={'contact'}>
             <Contact />
-          </ScrollableAnchor>
         </div>
         <Footer />
       </LanguageContext.Provider>
