@@ -9,7 +9,7 @@
   height: 15em;
   margin: 0.5em;
   cursor: pointer;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.5em;
 }
 
 .card {
@@ -153,20 +153,27 @@ input[type=checkbox]:checked + .card .back ul li:nth-child(4) {
   100% { opacity: 1; }
 }
 
-@media only screen and (min-width : 320px) {
+@media all and (min-width: 1690px) {
   .card-container {
-    height: 16em;
+    width: 25vw;
+    height: 14em;
   }
 }
 
-@media only screen and (min-width : 768px) {
+@media all and (min-width: 1280px) and (max-width: 1689px) {
   .card-container {
-    margin: 0em 0.5em 0 0.5em;
-    width: 22em;
-    height: 16em;
+    width: 35vw;
   }
+}
 
-  .card .back {
-    font-size: 1em;
+@media all and (min-width: 736px) and (max-width: 1279px) {
+  .card-container {
+    width: 55vw;
+  }
+}
+
+@media only screen and (min-width : 320px) and (max-with: 736px) {
+  .card-container {
+    height: 16em;
   }
 }

@@ -1,15 +1,15 @@
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #fff;
-    padding-bottom: 1em;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  padding-bottom: 1em;
+  min-height: 100vh;
 }
 
 .contact-input {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-form .input-error {
@@ -19,38 +19,71 @@
 .contact-form input,
 .contact-form textarea,
 .contact-form button {
-    height: 3em;
-    margin: 0.5em 0 0.5em 0;
-    border-radius: 0.5em;
-    padding: 0.4em;
-    border: 1px solid #888;
+  height: 3em;
+  margin: 0.5em 0 0.5em 0;
+  border-radius: 0.5em;
+  padding: 0.4em;
+  border: 1px solid #888;
 }
 
 .contact-form textarea {
-    height: 8em;
+  height: 8em;
 }
 
 .contact-form button {
-    color: #16F4D0;
-    background: #2c3e50;
-    font-size: 1em;
-    height: 2.5em;
+  color: #16F4D0;
+  background: #2c3e50;
+  font-size: 1em;
+  height: 2.5em;
 }
 
 .contact-form button:hover {
-    background: #394a5a;
+  background: #394a5a;
 }
 
 .contact-form .title {
-    text-align: center;
-    color: #16F4D0;
-    font-size: 2em;
+  text-align: center;
+  color: #16F4D0;
+  font-size: 2.5em;
 }
 
+@media all and (min-width: 1690px){
+  .contact-input {
+    width: 35vw;
+    align-self: center;
+  }
 
-@media only screen and (min-width : 768px) {
+  .contact-form .title {
+    font-size: 2.5em;
+    padding: 1em 0;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.7em;
+  }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1689px) {
+  .contact-input {
+    width: 50vw;
+    align-self: center;
+  }
+
+  .contact-form .title {
+    font-size: 2.5em;
+    padding: 1em 0;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.7em;
+  }
+}
+
+@media all and (min-width: 736px) and (max-width: 1279px) {
     .contact-input {
-        width: 60%;
+        width: 60vw;
         align-self: center;
     }
-}
+  }

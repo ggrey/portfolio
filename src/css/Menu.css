@@ -29,17 +29,36 @@
     user-select: none;
 }
 
+.inactive {
+    color: #FBFCFF;
+}
+
 .menu ul li a {
     text-decoration: none;
     color: #FBFCFF;
 }
 
-.menu ul li:last-child:after {
+.active {
+    color: #16F4D0 !important;
+}
+
+.menu ul li:last-child:before {
     content: '\f0ac';
     font-family: FontAwesome;
     font-weight: normal;
-    font-size: 1.1em;
+    color: #83d45a;
+    margin-right: 0.3em;
+}
+
+.menu ul li:last-child span
+{
+    font-size: 0.6em;
+    text-transform: uppercase;
     color: #83d45a;
 }
 
-
+@media all and (min-width: 1280px) {
+    .menu {
+        font-size: 1.4em;
+    }
+}

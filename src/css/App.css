@@ -5,7 +5,7 @@ ul {
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(#2c3e50, #3498db, #2c3e50);
+  background: linear-gradient(#2c3e50 20%, #3498db, #2c3e50 80%);
 }
 
 *, *::before, *::after {
@@ -22,9 +22,31 @@ body {
   color: #FBFCFF;
 }
 
-@media only screen and (min-width : 768px) {
+
+/* @media all and (max-width: 1690px) { ... }
+@media all and (max-width: 736px) { ... }
+@media all and (max-width: 480px) { ... } */
+
+@media all and (min-width: 1690px) { 
   .app {
-    padding: 3em 12em 0 12em;
-    font-size: 1.4em;
+    padding: 0 20em 0 20em;
+    font-size: 1.3em;
+    flex: 1;
+  }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1689px) {
+  .app {
+    padding: 0 14em 0 14em;
+    font-size: 1.2em;
+    flex: 1;
+  }
+}
+
+@media all and (min-width: 736px) and (max-width: 1279px) {
+  .app {
+    padding: 0 6em 0 6em;
+    font-size: 1.1em;
+    flex: 1;
   }
 }
