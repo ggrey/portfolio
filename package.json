@@ -3,22 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "dotenv": "^6.0.0",
     "emotion": "^9.2.4",
     "firebase": "^5.0.4",
     "re-base": "^3.2.3",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "react-emotion": "^9.2.4",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4",
-    "react-scrollchor": "^5.1.0",
-    "really-smooth-scroll": "^2.1.1"
+    "react-scripts": "1.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "aws s3 sync build/ s3://georginagrey.com"
+
   }
 }
