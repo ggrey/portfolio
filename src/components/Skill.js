@@ -79,7 +79,7 @@ class Skill extends Component {
     setTimeout(() => {
      animationsArray = [];
      this.setState({animations: animationsArray });
-    }, 3000);
+    }, 2000);
   }
 
   loadAnimationsArray() {
