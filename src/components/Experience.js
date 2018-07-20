@@ -135,7 +135,7 @@ class Experience extends Component {
 			},
 			{
 				title: 'Javascript',
-				stars: ['on', 'on', 'on', 'off', 'off']
+				stars: ['on', 'on', 'on', 'on', 'off']
 			},
 			{
 				title: 'ReactJS',
@@ -153,13 +153,13 @@ class Experience extends Component {
 							<h2 className="backend">BACK-END</h2>
 							<p>{langText.experience.backendDesc}</p>							
 							<section className="stack">								
-								<Skill skills={beSkills} />
+								<Skill skills={beSkills} side="be" />
 							</section>
 
 							<h2 className="frontend">FRONT-END</h2>
 							<p>{langText.experience.frontendDesc}</p>							
 							<section className="stack">
-								<Skill skills={feSkills} />
+								<Skill skills={feSkills} side="fe" />
 							</section>							
 						</section>
 					)}
