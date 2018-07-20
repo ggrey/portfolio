@@ -24,7 +24,7 @@ export const languages = {
 		menu: {
 			home: "The Home",
 			experience: "Work work",
-			contact: "Let's chat",
+			contact: "Let's talk",
 			about: "Know more"
 		},
 		notFound: {

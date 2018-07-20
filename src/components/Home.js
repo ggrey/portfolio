@@ -19,7 +19,7 @@ const main = css({
   },
 
   'img': {
-    height: '11em',
+    height: '13em',
   }
 });
 
@@ -32,7 +32,6 @@ const title = css({
   h1: {
     fontSize: '2.2em',
     margin: 0,
-    fontWeight: 'bold',
     color: color,
     letterSpacing: 4
   },
@@ -54,9 +53,7 @@ const typewritter = css({
     whiteSpace: 'nowrap',
     margin: '0.5em auto',
     borderRight: '0.04em solid white',
-    animation:
-      `typing 3s steps(25, end),
-      blink-caret 1s step-end infinite`,
+    animation: 'typing 3s steps(25, end), blink-caret 1s step-end infinite',
     fontSize: '1em',
     fontWeight: 'normal',
     letterSpacing: '0.07em',
@@ -69,7 +66,7 @@ const typewritter = css({
   },
 
   '@keyframes blink-caret': {
-    'from, to': { bordeColor: 'transparent' },
+    'from, to': { borderColor: 'transparent' },
     '50%': { borderColor: 'white' }
   },
 
@@ -100,7 +97,6 @@ class Home extends Component {
                   <span>{lang.home.occupation}</span>
                   {lang.home.intro2}
                   <span>{lang.home.intro3}</span>
-                  {/* <span className="heart"></span> */}
                 </p>
               </div>
             </section>

@@ -23,7 +23,7 @@ const main = css({
 
   '@media all and (min-width: 1280px)': {
     minHeight: '95vh',
-    padding: '3em 18em',
+    padding: '3em 17em',
     marginLeft: '22vh',
     width: '100%',
     fontSize: '1.2em'
