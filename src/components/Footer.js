@@ -5,7 +5,7 @@ import LanguagePicker from './LanguagePicker';
 const main = css({
 	label: 'footer',
 	display: 'flex',
-	justifyContent: 'space-around',
+	justifyContent: 'space-evenly',
 	alignItems: 'center',
 	color: '#fff',
 	textAlign: 'end',
@@ -21,6 +21,10 @@ const main = css({
 	a: {
 		textDecoration: 'none',
 		color: '#fff'
+	},
+
+	'a:hover': {
+		color: '#d3d3d3'
 	},
 
 	'.icon': {
@@ -56,7 +60,7 @@ const Footer = (props) => (
 			</a>
 		</section>
 		<LanguagePicker {...props} />
-		<p>&copy;Georgina Grey {new Date().getFullYear()}</p>
+		<p>&copy;Grey {new Date().getFullYear()}</p>
 	</footer>
 )
 

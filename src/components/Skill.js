@@ -86,8 +86,8 @@ class Skill extends Component {
     const { skills } = this.props;
     let { animationsArray } = this.state;
 
-    skills.map((skill) => {
-      skill.stars.map((star, i) => {
+    skills.forEach((skill) => {
+      skill.stars.forEach((star, i) => {
         animationsArray.push(`jump${i + 1}`);
       });
     });

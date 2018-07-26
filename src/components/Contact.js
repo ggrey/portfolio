@@ -77,16 +77,10 @@ class Contact extends Component {
 		return !isDisabled;
 	}
 
-	handleEmailChange = (e) => {
-		this.setState({ email: e.target.value }, () => this.validate());
-	}
-
-	handleNameChange = (e) => {
-		this.setState({ name: e.target.value }, () => this.validate());
-	}
-
-	handleMessageChange = (e) => {
-		this.setState({ message: e.target.value }, () => this.validate());
+	handleChange = (e) => {
+		let edit = this.state[e.currentTarget.name];
+		edit = e.currentTarget.value;
+		this.setState({ [e.currentTarget.name]: edit });
 	}
 
 	isFormValid = () => {
@@ -131,31 +125,32 @@ class Contact extends Component {
 							<input
 								type="text"
 								name="name"
-								placeholder="Name (required)"
+								placeholder={`${langText.contact.name} (${langText.contact.required})`}
 								autoComplete="name"
-								onChange={this.handleNameChange}
+								onChange={this.handleChange}
 								value={this.state.name}
 								className={this.state.errors.name ? "input-error" : ""} />
 							<input type="text"
 								name="subject"
-								placeholder="Subject"
+								placeholder={langText.contact.subject}
 								value={this.state.subject}
-								ref={this.subjectRef} />
+								onChange={this.handleChange} />
 							<input type="email"
 								name="email"
-								placeholder="Email (required)"
+								placeholder={`Email (${langText.contact.required})`}
 								autoComplete="email"
-								onChange={this.handleEmailChange}
+								onChange={this.handleChange}
 								value={this.state.email}
 								className={this.state.errors.email ? "input-error" : ""} />
 							<textarea
 								rows="5"
-								placeholder="Message (required)"
-								onChange={this.handleMessageChange}
+								name="message"
+								placeholder={`${langText.contact.message} (${langText.contact.required})`}
+								onChange={this.handleChange}
 								value={this.state.message}
 								className={this.state.errors.message ? "input-error" : ""}>
 							</textarea>
-							<button type="submit">Submit</button>
+							<button type="submit">{langText.contact.submit}</button>
 						</form>
 					</section>
 				)}

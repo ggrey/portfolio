@@ -97,6 +97,8 @@ class Home extends Component {
                   <span>{lang.home.occupation}</span>
                   {lang.home.intro2}
                   <span>{lang.home.intro3}</span>
+                  {lang.home.intro4}
+                  <span>{lang.home.intro5}</span>
                 </p>
               </div>
             </section>

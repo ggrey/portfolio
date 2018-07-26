@@ -7,6 +7,7 @@ const main = css({
   display: 'inherit',
   color: color,
   cursor: 'pointer',
+  transition: '0.1s all linear',
 
   svg: {
     height: '2em',
@@ -16,6 +17,10 @@ const main = css({
   span: {
     textTransform: 'uppercase',
     fontWeight: 'bold'
+  },
+
+  ':hover': {
+    transform: 'scale(1.1)'
   }
 
 });

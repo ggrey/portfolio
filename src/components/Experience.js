@@ -9,13 +9,6 @@ const main = css({
 	display: 'flex',
 	flexDirection: 'column',
 
-	'.border': {
-		borderBottom: '0.05em solid',
-		borderTop: '0.05em solid',
-		borderImageSource: 'linear-gradient(90deg, #F95151 0%, #F9E35F 24%, #83D45A 49%, #62AFDF 74%, #8678DD 100%)',
-		borderImageSlice: '20',
-	},
-
 	h2: {
 		textAlign: 'center',
 		color: color,
@@ -77,13 +70,6 @@ const main = css({
 		fontSize: '0.8em',
 		margin: '0 0 0 1.5em',
 		padding: '0'
-	},
-
-	'.line': {
-		borderTop: `1px solid ${color}`,
-		borderRadius: '5px',
-		width: '5em',
-		margin: '4em auto 0 auto'
 	},
 
 	'@media all and (min-width: 1280px)': {
@@ -160,7 +146,12 @@ class Experience extends Component {
 							<p>{langText.experience.frontendDesc}</p>							
 							<section className="stack">
 								<Skill skills={feSkills} side="fe" />
-							</section>							
+							</section>			
+
+							<p>
+								{langText.experience.more}
+								<a href="https://www.linkedin.com/in/georginagrey" target="_blank" rel="noopener noreferrer">here.</a>
+							</p>				
 						</section>
 					)}
 				</LanguageContext.Consumer>
