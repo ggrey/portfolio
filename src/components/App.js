@@ -6,11 +6,23 @@ import { LanguageContext, languages } from './LanguageContext';
 import Main from './Main';
 
 const app = css({
-	'@media all and (min-width: 1280px)': {
-		label: 'app',
+	label: 'app',
+	'@media all and (min-width: 2300px)': {
+    fontSize: '1.6em'
+  },
+
+  '@media all and (min-width: 1690px) and (max-width: 2299px)': {
+		fontSize: '1.1em'
+	},
+
+	'@media all and (min-width: 1280px) and (max-width: 1689px)': {		
 		position: 'relative',
 		display: 'flex',
-		fontSize: '1.15em'
+		fontSize: '1.1em'
+	},
+	
+	'@media all and (min-width: 736px) and (max-width: 1279px)': {
+    fontSize: '1.2em'
   }
 });
 

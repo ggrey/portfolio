@@ -41,6 +41,12 @@ const main = css({
 		background: '#394a5a',
 	},
 
+	'@media all and (min-width: 2300px)': {
+		'input, textarea': {
+			fontSize: '0.6em'
+		}
+	},
+
 	'@media all and (min-width: 1280px)': {
 		button: {
 			width: '20em',

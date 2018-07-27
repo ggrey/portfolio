@@ -36,14 +36,38 @@ const title = css({
     letterSpacing: 4
   },
 
-  '@media all and (min-width: 1280px)': {
+  '@media all and (min-width: 2500px)': {
     h1: {
       fontSize: '3.5em'
+    },
+  },
+
+  '@media all and (min-width: 1690px) and (max-width: 2499px)': {
+    h1: {
+      fontSize: '3.5em'
+    },
+  },
+
+  '@media all and (min-width: 1280px) and (max-width: 1689px)': {
+    h1: {
+      fontSize: '2.8em'
     },
 
     h2: {
       margin: '1em auto'
     }
+  },
+  
+  '@media all and (min-width: 736px) and (max-width: 1279px)': {
+    h1: {
+      fontSize: '2.7em'
+    },
+  },
+
+  '@media all and (max-width: 340px)': {
+    h1: {
+      fontSize: '1.8em'
+    },
   }
 });
 

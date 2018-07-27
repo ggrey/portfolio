@@ -19,7 +19,7 @@ const main = css({
 	'h2::before': {
 		content: "''",
 		display: 'block',
-		width: '2em',
+		width: '3em',
 		borderTop: 'solid 1px',
 		margin: '4em auto 1.5em auto'
 	},
@@ -72,13 +72,25 @@ const main = css({
 		padding: '0'
 	},
 
-	'@media all and (min-width: 1280px)': {
+	'@media all and (min-width: 1690px)': {
+		'.stack': { 
+			width: '65%'
+		}
+	},
+
+	'@media all and (min-width: 1280px) and (max-width: 1689px)': {
 		h2: {
 			margin: '3em 0 1em 0',
 			fontSize: '2em',
 			letterSpacing: '0.2em'
 		},
 
+		'.stack': { 
+			width: '65%'
+		}
+	},
+
+	'@media all and (min-width: 736px) and (max-width: 1279px)': {
 		'.stack': { 
 			width: '65%'
 		}
