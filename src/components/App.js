@@ -8,31 +8,35 @@ import Main from './Main';
 const app = css({
 	label: 'app',
 	'@media all and (min-width: 2300px)': {
-    fontSize: '1.6em'
-  },
+		fontSize: '1.6em'
+	},
 
-  '@media all and (min-width: 1690px) and (max-width: 2299px)': {
+	'@media all and (min-width: 1690px) and (max-width: 2299px)': {
 		fontSize: '1.1em'
 	},
 
-	'@media all and (min-width: 1280px) and (max-width: 1689px)': {		
+	'@media all and (min-width: 1280px) and (max-width: 1689px)': {
 		position: 'relative',
 		display: 'flex',
 		fontSize: '1.1em'
 	},
-	
+
 	'@media all and (min-width: 736px) and (max-width: 1279px)': {
-    fontSize: '1.2em'
-  }
+		fontSize: '1.2em'
+	}
 });
 
 class App extends Component {
-	state = {
-		language: 'en',
-		langText: languages.en,
-		toggleLanguage: this.toggleLanguage
-	}
+	constructor(props) {
+		super(props);
 
+		this.state = {
+			language: 'en',
+			langText: languages.en,
+			toggleLanguage: this.toggleLanguage
+		}
+	}
+	
 	toggleLanguage = () => {
 		let { language, langText } = this.state;
 		language = language === 'en' ? 'es' : 'en';
@@ -42,15 +46,13 @@ class App extends Component {
 
 	render() {
 		return (
-			<LanguageContext.Provider value={this.state}>
-				<div id="app" className={app}>
+			<div id="app" className={app}>
+				<LanguageContext.Provider value={this.state}>
 					<Menu />
-					<Main {...this.state} />
-				</div>
-				<Footer
-					toggleLanguage={this.toggleLanguage}
-					langText={this.state.language}/>
-			</LanguageContext.Provider>
+					<Main />
+					<Footer />
+				</LanguageContext.Provider>
+			</div>
 		)
 	}
 }

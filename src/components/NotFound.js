@@ -8,12 +8,10 @@ const main = css({
   label: 'not-found',
   display: 'flex',
   flexDirection: 'column',
-  height: '100vh',
   textAlign: 'center',
 
   h1: {
-    fontSize: '3.5em',
-    padding: '0.7em'
+    fontSize: '3em',
   },
 
   a: {

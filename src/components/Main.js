@@ -57,8 +57,6 @@ const Main = () => (
       <Route component={NotFound}></Route>
     </Switch>
   </main>
-
-
 )
 
 export default Main;
