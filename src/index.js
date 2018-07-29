@@ -23,7 +23,7 @@ injectGlobal`
   }
 
   body {    
-    background: linear-gradient(#2c3e50 50%, #3498db);
+    background: linear-gradient(#2c3e50 40%, #32678b);
   }
 `
 ReactDOM.render(

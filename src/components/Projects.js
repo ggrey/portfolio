@@ -49,7 +49,7 @@ const images = [
   }
 ]
 
-class About extends Component {
+class Proyects extends Component {
 
   componentDidMount() {
     this.observe();
@@ -63,7 +63,12 @@ class About extends Component {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.intersectionRatio > 0) {
-          this.loadImage(entry.target);
+          const image = entry.target;
+          const src = image.dataset.src;
+
+          this.fetchImage(src).then(() => {
+            image.src = src;
+          });
         }
       });
     }, options);
@@ -72,20 +77,13 @@ class About extends Component {
     images.forEach(i => observer.observe(i));
   }
 
-  fetchImage = (url) => {
+  fetchImage = (src) => {
     return new Promise((resolve, reject) => {
       const image = new Image();
-      image.src = url;
+      image.src = src;
       image.onload = resolve;
       image.onerror = reject;
     });
-  }
-  
-  loadImage = (image) => {
-    const src = image.dataset.src;
-    this.fetchImage(src).then(() => {
-      image.src = src;
-    })
   }
 
   render() {
@@ -110,4 +108,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default Proyects;
