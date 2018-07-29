@@ -19,7 +19,7 @@ const main = css({
   fontFamily: "'Poiret One', Helvetica, 'sans-serif'",
   fontSize: '1.05em',
   color: '#FBFCFF',
-  lineHeight: '1.3em',
+  lineHeight: '1.3em', 
 
   '@media all and (min-width: 2300px)': {
     fontSize: '1.2em',

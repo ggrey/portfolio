@@ -162,7 +162,7 @@ class Experience extends Component {
 
 							<p>
 								{langText.experience.more}
-								<a href="https://www.linkedin.com/in/georginagrey" target="_blank" rel="noopener noreferrer">here.</a>
+								<a href="https://www.linkedin.com/in/georginagrey" target="_blank" rel="noopener noreferrer">{langText.misc.here}.</a>
 							</p>				
 						</section>
 					)}

@@ -23,7 +23,6 @@ const main = css({
   ':hover': {
     transform: 'scale(1.1)'
   }
-
 });
 
 const LanguagePicker = () => (

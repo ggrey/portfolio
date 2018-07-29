@@ -41,7 +41,11 @@ export const languages = {
 		},
 		projects: {			
 			intro: "  Here's where I'll showcase my projects, soon I'll be adding more examples of my work (pinky promise). Click on each card to flip it!",
-			portfolio: "  This is a multi-language website (the language switcher is in the center of the footer) built with ReactJS and Google's Firebase database.\n\n  It is hosted and served by Amazon Web Services infrastructure, the code is published on a S3 bucket and is served faster in America and Europe by CloudFront, which is a content delivery network that greatly improves the website's load time and security."
+			portfolio: "  This is a multi-language website (the language switcher is in the center of the footer) built with ReactJS and Google's Firebase database.\n\n  It is hosted and served by Amazon Web Services infrastructure, the code is published on a S3 bucket and is served faster in America and Europe by CloudFront, which is a content delivery network that greatly improves the website's load time and security.",
+			devto: "  I published a post on dev.to explaining a bit how I built this website, if you are curious check it out "
+		},
+		misc: {
+			here: "here"
 		}
 	},
 	es: {
@@ -83,7 +87,11 @@ export const languages = {
 		},
 		projects: {			
 			intro: "  Aquí mostraré mis proyectos, pronto agregaré más ejemplos de mi trabajo (prometido). Dale clic a cada tarjeta para girarla!",
-			portfolio: "  Este es un sitio multi-lenguage (el switch de lenguage está en el centro del pie de página) creado con ReactJS y Firebase una base de datos de Google.\n\n  Es alojado y servido en la infraestructura de Amazon Web Services, el código está publicado en un balde S3 y es servido con más rapidez en América y Europa por CloudFront, la cual es una red de distribución de contenido que mejora muchísimo la velocidad de carga y la seguridad del sitio."
+			portfolio: "  Este es un sitio multi-lenguage (el switch de lenguage está en el centro del pie de página) creado con ReactJS y Firebase una base de datos de Google.\n\n  Es alojado y servido en la infraestructura de Amazon Web Services, el código está publicado en un balde S3 y es servido con más rapidez en América y Europa por CloudFront, la cual es una red de distribución de contenido que mejora muchísimo la velocidad de carga y la seguridad del sitio.",
+			devto: "  He publicado una entrada en dev.to en donde explico un poco el proceso de cómo creé este sitio, si te da curiosidad míralo "
+		},
+		misc: {
+			here: "aquí"
 		}
 	}
 }
