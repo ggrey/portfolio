@@ -36,7 +36,7 @@ class App extends Component {
 			toggleLanguage: this.toggleLanguage
 		}
 	}
-	
+
 	toggleLanguage = () => {
 		let { language, langText } = this.state;
 		language = language === 'en' ? 'es' : 'en';
@@ -46,13 +46,13 @@ class App extends Component {
 
 	render() {
 		return (
-			<div id="app" className={app}>
-				<LanguageContext.Provider value={this.state}>
+			<LanguageContext.Provider value={this.state}>
+				<div id="app" className={app}>
 					<Menu />
 					<Main />
-					<Footer />
-				</LanguageContext.Provider>
-			</div>
+				</div>
+				<Footer />
+			</LanguageContext.Provider>
 		)
 	}
 }
