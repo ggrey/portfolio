@@ -43,7 +43,7 @@ const main = css({
 
 	'@media all and (min-width: 2300px)': {
 		'input, textarea': {
-			fontSize: '0.6em'
+			fontSize: '0.8em'
 		}
 	},
 
@@ -53,6 +53,10 @@ const main = css({
 			margin: 'auto',
 			height: '2.2em',
 			marginTop: '1em'
+		},
+
+		'input, textarea': {
+			fontSize: '0.7em'
 		}
 	}
 });

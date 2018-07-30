@@ -5,6 +5,10 @@ import Footer from './Footer';
 import { LanguageContext, languages } from './LanguageContext';
 import Main from './Main';
 
+const wrapper = css({
+	height: '100vh'
+});
+
 const app = css({
 	label: 'app',
 	'@media all and (min-width: 2300px)': {
@@ -46,13 +50,14 @@ class App extends Component {
 
 	render() {
 		return (
-			<LanguageContext.Provider value={this.state}>
-				<div id="app" className={app}>
-					<Menu />
-					<Main />
-				</div>
-				<Footer />
-			</LanguageContext.Provider>
+			<div id="wrapper" className={wrapper}>
+				<LanguageContext.Provider value={this.state}>
+					<div id="app" className={app}>
+						<Menu />
+						<Main />
+					</div>
+					<Footer />
+				</LanguageContext.Provider></div>
 		)
 	}
 }
