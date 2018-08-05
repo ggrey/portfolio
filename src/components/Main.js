@@ -6,6 +6,7 @@ import Experience from './Experience';
 import Contact from './Contact';
 import Projects from './Projects';
 import NotFound from './NotFound';
+import { color } from './Theme';
 
 const main = css({
   label: 'main',
@@ -21,24 +22,28 @@ const main = css({
   color: '#FBFCFF',
   lineHeight: '1.3em', 
 
+  a: {
+		color: color
+	},
+
   '@media all and (min-width: 2300px)': {
     fontSize: '1.2em',
     minHeight: '95vh',
     padding: '3em 13em',
-    marginLeft: '22vh',
+    marginLeft: '10vw',
   },
 
   '@media all and (min-width: 1690px) and (max-width: 2299px)': {
     fontSize: '1.2em',
     minHeight: '95vh',
     padding: '3em 15em',
-    marginLeft: '22vh',
+    marginLeft: '10vw',
   },
 
   '@media all and (min-width: 1280px) and (max-width: 1689px)': {
     minHeight: '95vh',
     padding: '3em 15em',
-    marginLeft: '22vh',
+    marginLeft: '10vw',
     fontSize: '1.1em'
   },
 

@@ -76,8 +76,8 @@ const main = css({
   '@media all and (min-width: 1280px)': {
     position: 'fixed',
     flexDirection: 'column',
-    width: '22vh',
-    minWidth: '22vh',
+    width: '10vw',
+    minWidth: '10vw',
     fontSize: '1.3em',
     backgroundImage: 'linear-gradient(180deg, #F95151 0%, #F9E35F 24%, #83D45A 49%, #62AFDF 74%, #8678DD 100%)',
     marginLeft: '1px',

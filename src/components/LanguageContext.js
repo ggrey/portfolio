@@ -27,7 +27,7 @@ export const languages = {
 			subject: "Subject",
 			message: "Message",
 			required: "required",
-			submit: "Submit"
+			submit: "Send"
 		},
 		menu: {
 			home: "Home",
@@ -41,7 +41,7 @@ export const languages = {
 		},
 		projects: {			
 			intro: "  Here's where I'll showcase my projects, soon I'll be adding more examples of my work (pinky promise). Click on each card to flip it!",
-			portfolio: "  This is a multi-language website (the language switcher is in the center of the footer) built with ReactJS and Google's Firebase database.\n\n  It is hosted and served by Amazon Web Services infrastructure, the code is published on a S3 bucket and is served faster in America and Europe by CloudFront, which is a content delivery network that greatly improves the website's load time and security.",
+			portfolio: "  This is a multi-language website (the language switcher is in the center of the footer) built with ReactJS, AWS and Google's Firebase database.\n\n  It is hosted and served by Amazon Web Services infrastructure, the code is published on a S3 bucket and is served faster in America and Europe by CloudFront, which is a content delivery network that greatly improves the website's load time and security.",
 			devto: "  I published a post on dev.to explaining a bit how I built this website, if you are curious check it out "
 		},
 		misc: {
@@ -59,10 +59,10 @@ export const languages = {
 			details: "Diseño & programo Web Apps"
 		},
 		experience: {
-			intro: "  Empecé mi carrera como desarrolladora back-end, trabajando en bases de datos y diseño de arquitectura. He sido parte de equipos pequeños y grandes (distribuidos), ahí entendí lo crucial que resultan la documentación, versionamiento y la comunicación efectiva del equipo en pos de mantener flujos de trabajos sanos.\n\n Actualmente estoy trabajando como desarrolladora front-end y alcanzando una meta personal, la cual es sentirme cómoda en ambos lados del espectro para desarrollar aplicaciones desde cualquiera de sus frentes.",
+			intro: "  Empecé mi carrera como desarrolladora back-end, trabajando en bases de datos y diseño de arquitectura. He sido parte de equipos pequeños y grandes (distribuidos), ahí entendí lo crucial que resultan la documentación, versionamiento y la comunicación efectiva dentro del equipo en pos de mantener un flujo de trabajo sano.\n\n Actualmente estoy trabajando como desarrolladora front-end y alcanzando una meta personal, la cual es sentirme cómoda en ambos lados del espectro para desarrollar aplicaciones desde cualquiera de sus frentes.",
 			quote: "Todo gran desarrollador que conozcas llegó ahí resolviendo problemas que no estaba cualificado para resolver hasta que finalmente lo hizo.",
 			title: "EXPERIENCIA",
-			backendDesc: "  El desarrollo back-end es mi fuerte. He trabajado extensamente en aplicaciones a gran escala usando frameworks de .NET (C#, VB, Entity, Web API), SQL Server y Oracle. También trabajé con NodeJS intrgrando almacenamiento en la nube de Amazon Web Services.\n\n  El diseño de arquitectura es algo que disfruto mucho porque es una de las etapas más importantes y desafiantes. Mi meta a corto plazo es seguir aprendiendo sobre servicios en la nube (como AWS) para mejorar mi proceso de desarrollo.",
+			backendDesc: "  El desarrollo back-end es mi fuerte. He trabajado extensamente en aplicaciones a gran escala usando frameworks de .NET (C#, VB, Entity, Web API), SQL Server y Oracle. También trabajé con NodeJS integrando almacenamiento en la nube de Amazon Web Services.\n\n  El diseño de arquitectura es algo que disfruto mucho porque es una de las etapas más importantes y desafiantes. Mi meta a corto plazo es seguir aprendiendo sobre servicios en la nube (como AWS) para mejorar mi proceso de desarrollo.",
 			frontendDesc: "  En la parte front-end es donde he estado enfocada durante el último par de años. Actualmente estoy trabajando en esta área usando HTML5, CSS3 y Javascript diariamente.\n\n  También estoy trabajando con ReactJS, la cual se ha convertido en una de mis herramientas preferidas en el desarrollo web. En un futuro cercano quiero llevar mis habilidades en CSS3 y Javascript al siguiente nivel mientras aprendo más sobre UI/UX y aplicaciones web progresivas.",
 			more: "  Si a este punto no le maté de aburrimiento y quiere saber más detalles sobre mi experiencia anterior, visite mi perfil de Linked In "
 		},
@@ -86,8 +86,8 @@ export const languages = {
 			link: "Llévame al Inicio"
 		},
 		projects: {			
-			intro: "  Aquí mostraré mis proyectos, pronto agregaré más ejemplos de mi trabajo (prometido). Dale clic a cada tarjeta para girarla!",
-			portfolio: "  Este es un sitio multi-lenguage (el switch de lenguage está en el centro del pie de página) creado con ReactJS y Firebase una base de datos de Google.\n\n  Es alojado y servido en la infraestructura de Amazon Web Services, el código está publicado en un balde S3 y es servido con más rapidez en América y Europa por CloudFront, la cual es una red de distribución de contenido que mejora muchísimo la velocidad de carga y la seguridad del sitio.",
+			intro: "  Aquí mostraré mis proyectos, pronto agregaré más ejemplos de mi trabajo (prometido). ¡Dale clic a cada tarjeta para girarla!",
+			portfolio: "  Este es un sitio multi-lenguage (el switch de lenguage está en el centro del pie de página) creado con ReactJS, AWS y Firebase una base de datos de Google.\n\n  Es alojado y servido en la infraestructura de Amazon Web Services, el código está publicado en un balde S3 y es servido con más rapidez en América y Europa por CloudFront, la cual es una red de distribución de contenido que mejora muchísimo la velocidad de carga y la seguridad del sitio.",
 			devto: "  He publicado una entrada en dev.to en donde explico un poco el proceso de cómo creé este sitio, si te da curiosidad míralo "
 		},
 		misc: {

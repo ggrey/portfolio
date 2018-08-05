@@ -24,7 +24,7 @@ const main = css({
 	},
 
 	'a:hover': {
-		color: '#efefef'
+		color: '#e6e6e6'
 	},
 
 	'.icon': {
@@ -43,7 +43,7 @@ const main = css({
 	'@media all and (min-width: 1280px) and (max-width: 1689px)': {
 		height: '5vh',
 		fontSize: '1em',
-		marginLeft: '22vh',
+		marginLeft: '10vw',
 
 		'.icon': {
 			marginLeft: '1.5em'

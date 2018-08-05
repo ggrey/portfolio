@@ -1,6 +1,5 @@
 import Rebase from 're-base';
 import firebase from 'firebase';
-// require('dotenv').config();
 
 const firebaseApp = firebase.initializeApp({
     apiKey: process.env.FIREBASE_API_KEY,

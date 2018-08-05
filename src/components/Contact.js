@@ -3,6 +3,7 @@ import { css } from 'emotion';
 import { LanguageContext } from './LanguageContext';
 import { color } from './Theme';
 import base from '../base';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const main = css({
 	display: 'flex',
@@ -41,6 +42,19 @@ const main = css({
 		background: '#394a5a',
 	},
 
+	'.captcha': {
+		alignSelf: 'center',
+		marginTop: '0.5em'
+	},
+
+	'.disabled': {
+		background: '#9d9d9d'
+	},
+
+	'.disabled:hover': {
+		background: '#9d9d9d'
+	},
+
 	'@media all and (min-width: 2300px)': {
 		'input, textarea': {
 			fontSize: '0.8em'
@@ -71,7 +85,8 @@ class Contact extends Component {
 			subject: '',
 			email: '',
 			message: '',
-			errors: {}
+			errors: {},
+			submitDisabled: true
 		}
 	}
 
@@ -125,10 +140,16 @@ class Contact extends Component {
 			});
 	}
 
+	onCaptchaChange = (value) => {
+		let { submitDisabled } = this.state;
+		submitDisabled = value === null;
+		this.setState({ submitDisabled });
+	}
+
 	render() {
 		return (
 			<LanguageContext.Consumer>
-				{({ langText }) => (
+				{({ langText, language }) => (
 					<section id="contact" className={main}>
 						<p>{langText.contact.content}</p>
 						<form className="contact-input" onSubmit={this.handleSubmit.bind(this)}>
@@ -160,8 +181,15 @@ class Contact extends Component {
 								value={this.state.message}
 								className={this.state.errors.message ? "input-error" : ""}>
 							</textarea>
-							<button type="submit">{langText.contact.submit}</button>
+							<button className={this.state.submitDisabled ? "disabled" : ""} disabled={this.state.submitDisabled} type="submit">{langText.contact.submit}</button>
 						</form>
+						<ReCAPTCHA
+							className="captcha"
+							sitekey="6Ld7ZWgUAAAAAMxNCbZTQMNfAjLVA9thKVsCS8T5"
+							theme="dark"
+							onChange={this.onCaptchaChange}
+							lang="en"
+						/>
 					</section>
 				)}
 			</LanguageContext.Consumer>

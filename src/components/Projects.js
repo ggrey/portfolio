@@ -103,7 +103,6 @@ class Proyects extends Component {
               <p>{langText.projects.devto}
                 <a href="https://dev.to/georginagrey/my-first-portfolio-with-react-and-aws-2g73" target="_blank" rel="noopener noreferrer">{langText.misc.here}.</a>
               </p>
-              
             </section>
           )}
         </LanguageContext.Consumer>

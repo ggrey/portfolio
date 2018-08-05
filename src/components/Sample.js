@@ -50,7 +50,8 @@ const main = css({
   '.back': {
     transform: 'rotateY(180deg)',
     background: '#333',
-    padding: '0 0.5em'
+    padding: '0 0.5em',
+    border: '2px solid #32678b'
   },
 
   img: {
