@@ -30,7 +30,7 @@ const title = css({
   alignItems: 'center',
 
   h1: {
-    fontSize: '2.2em',
+    fontSize: '2.1em',
     margin: 0,
     color: color,
     letterSpacing: 4

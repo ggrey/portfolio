@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { css } from 'emotion';
 import { yellow } from './Theme';
+import { supportsIntersectionObserver } from '../util';
 
 const main = css({
   label: 'skills',
@@ -94,7 +95,8 @@ class Skill extends Component {
   }
 
   componentDidMount() {
-    this.observe();
+    if(supportsIntersectionObserver())
+      this.observe();
   }
 
   observe() {

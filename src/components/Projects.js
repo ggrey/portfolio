@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { css } from 'emotion';
 import { LanguageContext } from './LanguageContext';
 import Sample from './Sample';
+import { supportsIntersectionObserver } from '../util';
 
 const main = css({
   label: 'samples',
@@ -49,10 +50,17 @@ const images = [
   }
 ]
 
-class Proyects extends Component {
+class Projects extends Component {
 
   componentDidMount() {
-    this.observe();
+    if(supportsIntersectionObserver()){
+      this.observe();
+    }else{
+      const images = Array.from(document.querySelectorAll('img'));
+      images.forEach(img => img.src = img.dataset.src);
+
+      console.log(images[0].src, images[0].dataset.src)
+    }
   }
 
   observe() {
@@ -111,4 +119,4 @@ class Proyects extends Component {
   }
 }
 
-export default Proyects;
+export default Projects;

@@ -5,13 +5,18 @@ import LanguagePicker from './LanguagePicker';
 const main = css({
 	label: 'footer',
 	display: 'flex',
-	justifyContent: 'space-evenly',
+	// justifyContent: 'space-evenly',
 	alignItems: 'center',
 	color: '#fff',
 	textAlign: 'end',
 	fontSize: '0.8em',
 	borderTop: '1px solid #3c759b',
 	fontFamily: "'Poiret One', 'sans-serif'",
+
+	'> *': {
+		marginRight: 'auto',
+		marginLeft: 'auto'
+	},
 
 	p: {
 		fontSize: '1em',
