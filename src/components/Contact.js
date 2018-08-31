@@ -21,9 +21,14 @@ const main = css({
 	'input, textarea, button': {
 		height: '3em',
 		margin: '0.5em 0',
-		borderRadius: '0.5em',
+		// borderRadius: '0.5em',
 		border: '1px solid',
 		padding: '0.4em'
+	},
+
+	'.name-email': {
+		display: 'flex',
+		flexDirection: 'column'
 	},
 
 	textarea: {
@@ -58,10 +63,23 @@ const main = css({
 	'@media all and (min-width: 2300px)': {
 		'input, textarea': {
 			fontSize: '0.8em'
+		},
+
+		'.name-email': {
+			flexDirection: 'row',
+
+			input: {
+				width: '100%'
+			},
+
+			'input[name="name"]': {
+				marginRight: '0.3em'
+			}
 		}
+		
 	},
 
-	'@media all and (min-width: 1280px)': {
+	'@media all and (min-width: 1280px) and (max-width: 2299px)': {
 		button: {
 			width: '20em',
 			margin: 'auto',
@@ -71,6 +89,18 @@ const main = css({
 
 		'input, textarea': {
 			fontSize: '0.7em'
+		},
+
+		'.name-email': {
+			flexDirection: 'row',
+
+			input: {
+				width: '100%'
+			},
+
+			'input[name="name"]': {
+				marginRight: '0.3em'
+			}
 		}
 	}
 });
@@ -153,26 +183,30 @@ class Contact extends Component {
 					<section id="contact" className={main}>
 						<p>{langText.contact.content}</p>
 						<form className="contact-input" onSubmit={this.handleSubmit.bind(this)}>
-							<input
-								type="text"
-								name="name"
-								placeholder={`${langText.contact.name} (${langText.contact.required})`}
-								autoComplete="name"
-								onChange={this.handleChange}
-								value={this.state.name}
-								className={this.state.errors.name ? "input-error" : ""} />
+							<div className="name-email">
+								<input
+									type="text"
+									name="name"
+									placeholder={`${langText.contact.name} (${langText.contact.required})`}
+									autoComplete="name"
+									onChange={this.handleChange}
+									value={this.state.name}
+									className={this.state.errors.name ? "input-error" : ""} />
+								<input type="email"
+									name="email"
+									placeholder={`Email (${langText.contact.required})`}
+									autoComplete="email"
+									onChange={this.handleChange}
+									value={this.state.email}
+									className={this.state.errors.email ? "input-error" : ""} />
+							</div>
+
 							<input type="text"
 								name="subject"
 								placeholder={langText.contact.subject}
 								value={this.state.subject}
 								onChange={this.handleChange} />
-							<input type="email"
-								name="email"
-								placeholder={`Email (${langText.contact.required})`}
-								autoComplete="email"
-								onChange={this.handleChange}
-								value={this.state.email}
-								className={this.state.errors.email ? "input-error" : ""} />
+
 							<textarea
 								rows="5"
 								name="message"

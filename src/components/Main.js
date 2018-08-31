@@ -17,26 +17,31 @@ const main = css({
   justifyContent: 'center',
   alignItems: 'center',
   whiteSpace: 'pre-wrap',
-  fontFamily: "'Poiret One', Helvetica, 'sans-serif'",
-  fontSize: '1.05em',
+  fontFamily: "Quicksand, Helvetica, 'sans-serif'",
+  fontSize: '1em',
+  fontWeight: '300',
   color: '#FBFCFF',
   lineHeight: '1.3em', 
+
+  'h1, h2': {
+    fontFamily: "'Poiret One', Helvetica, 'sans-serif'",
+  },
 
   a: {
 		color: color
 	},
 
   '@media all and (min-width: 2300px)': {
-    fontSize: '1.2em',
+    fontSize: '1.1em',
     minHeight: '95vh',
     padding: '3em 13em',
     marginLeft: '10vw',
   },
 
   '@media all and (min-width: 1690px) and (max-width: 2299px)': {
-    fontSize: '1.2em',
+    fontSize: '1.1em',
     minHeight: '95vh',
-    padding: '3em 15em',
+    padding: '3em 13em',
     marginLeft: '10vw',
   },
 
@@ -44,7 +49,7 @@ const main = css({
     minHeight: '95vh',
     padding: '3em 15em',
     marginLeft: '10vw',
-    fontSize: '1.1em'
+    fontSize: '1em'
   },
 
   '@media all and (min-width: 736px) and (max-width: 1279px)': {

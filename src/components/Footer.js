@@ -9,7 +9,7 @@ const main = css({
 	alignItems: 'center',
 	color: '#fff',
 	textAlign: 'end',
-	fontSize: '0.8em',
+	fontSize: '0.7em',
 	borderTop: '1px solid #3c759b',
 	fontFamily: "'Poiret One', 'sans-serif'",
 
@@ -33,16 +33,16 @@ const main = css({
 	},
 
 	'.icon': {
-		height: '1.5em',
-		marginLeft: '1em'
+		height: '1.7em',
+		marginLeft: '1.1em'
 	},
 
 	'@media all and (min-width: 2500px)': {
-    fontSize: '1.5em'
+    fontSize: '1.3em'
   },
 
   '@media all and (min-width: 1690px) and (max-width: 2499px)': {
-      fontSize: '1em'
+      fontSize: '0.9em'
   },
 
 	'@media all and (min-width: 1280px) and (max-width: 1689px)': {

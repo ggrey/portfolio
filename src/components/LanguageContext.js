@@ -4,12 +4,15 @@ export const languages = {
 	en:
 	{
 		home: {
-			intro: "Hi there! I'm a ",
-			occupation: "Web Developer ",
-			intro2: `based in San José, Costa Rica.\n\nI create Web Apps that are intuitive and work as expected, big deal huh? But I do have a knack for finding simple solutions to complex problems.\n\nMy goal is to write programs that are `,
-			intro3: "efficient, readable ",
-			intro4: "and ",
-			intro5: "tested.",
+			intro: "Welcome to my website!\n\nI'm a ",
+			occupation: "Web Developer",
+			intro2: " focused on making Web Applications that load fast, look good and are easy to use.",
+			q1: "Do you need to promote your brand or small shop?",
+			a1: "\nA static website might do the trick. Quick and affordable development.",
+			q2: "Are you looking to take your business to the next level?",
+			a2: "\nI can design a custom web solution tailored to fit your business requirements.",
+			q3: "Is your team of developers in need of an extra hand?",
+			a3: "\nI've worked with distributed teams across America and Europe, check out my experience & skills.",
 			details: "I design & code Web Apps"
 		},
 		experience: {
@@ -18,7 +21,8 @@ export const languages = {
 			title: "EXPERIENCE",
 			backendDesc: "  Back-end development is my strongest suit. I've worked extensively in large-scale applications using .NET frameworks (C#, VB, Entity, Web API), SQL Server and Oracle. I have also worked with NodeJS integrating cloud storage from Amazon Web Services.\n\n  Architectural design is something I enjoy doing because is one of the most important and challenging stages. My short-term goal is to keep learning how to leverage cloud services platforms (like AWS) to enhance my development process.",
 			frontendDesc: "  Front-end is where I've been focused for the last couple of years. Today I'm working in this area using HTML5, CSS3 and Javascript on a daily basis.\n\n  I'm also working with ReactJS which has become one of my favorite tools in web development. In the near future, I'd like to take my JS and CSS3 skills to the next level while learning more about UI/UX and progressive web apps.",
-			more: "  If I didn't bore you to death at this point and want to know more details about my previous experience, check my Linked In profile "
+			more: "  If I didn't bore you to death at this point and want to know more details about my previous experience, check my Linked In profile ",
+			resume: " or you can download my resume "
 		},
 		contact: {
 			title: 'CONTACT',
@@ -27,7 +31,7 @@ export const languages = {
 			subject: "Subject",
 			message: "Message",
 			required: "required",
-			submit: "Send"
+			submit: "Send Message"
 		},
 		menu: {
 			home: "Home",
@@ -40,7 +44,7 @@ export const languages = {
 			link: "Take me Home"
 		},
 		projects: {			
-			intro: "  Here's where I'll showcase my projects, soon I'll be adding more examples of my work (pinky promise). Click on each card to flip it!",
+			intro: "  Here's where I'll showcase my projects, soon I'll be adding more examples of my work (pinky promise). Click on each card to know more about the project.",
 			portfolio: "  This is a multi-language website (the language switcher is in the center of the footer) built with ReactJS, AWS and Google's Firebase database.\n\n  It is hosted and served by Amazon Web Services infrastructure, the code is published on a S3 bucket and is served faster in America and Europe by CloudFront, which is a content delivery network that greatly improves the website's load time and security.",
 			devto: "  I published a post on dev.to explaining a bit how I built this website, if you are curious check it out "
 		},
@@ -50,13 +54,16 @@ export const languages = {
 	},
 	es: {
 		home: {
-			intro: "¡Hola! Soy una ",
-			occupation: "Desarrolladora Web ",
-			intro2: "viviendo en San José, Costa Rica.\n\nCreo Aplicaciones Web intuitivas y que funcionan según lo esperado, gran cosa ¿no? Pero tengo una habilidad especial para encontrar soluciones sencillas a problemas complejos.\n\nMi objetivo final es escribir programas que sean ",
-			intro3: 'eficientes, legibles ',
-			intro4: "y ",
-			intro5: "probados.",
-			details: "Diseño & programo Web Apps"
+			intro: "Bienvenido a mi sitio web!\n\nSoy una ",
+			occupation: "Desarrolladora Web",
+			intro2: " especializada en crear Aplicaciones Web que carguen rápido, se vean bien y sean fáciles de usar.",
+			q1: "¿Necesita promover su marca o pequeña empresa?",
+			a1: "\nUn sitio web estático podría ser lo que necesita. Desarrollo rápido y asequible.",
+			q2: "¿Está buscando llevar su negocio al siguiente nivel?",
+			a2: "\nPuedo diseñar una solución web personalizada pensando en los requisitos de su negocio.",
+			q3: "¿Tu equipo de desarrolladores necesita una mano extra?",
+			a3: "\nHe trabajado con equipos distribuidos en América y Europa, checa mi experiencia y habilidades.",
+			details: "Diseño & programo Aplicaciones Web"
 		},
 		experience: {
 			intro: "  Empecé mi carrera como desarrolladora back-end, trabajando en bases de datos y diseño de arquitectura. He sido parte de equipos pequeños y grandes (distribuidos), ahí entendí lo crucial que resultan la documentación, versionamiento y la comunicación efectiva dentro del equipo en pos de mantener un flujo de trabajo sano.\n\n Actualmente estoy trabajando como desarrolladora front-end y alcanzando una meta personal, la cual es sentirme cómoda en ambos lados del espectro para desarrollar aplicaciones desde cualquiera de sus frentes.",
@@ -64,16 +71,17 @@ export const languages = {
 			title: "EXPERIENCIA",
 			backendDesc: "  El desarrollo back-end es mi fuerte. He trabajado extensamente en aplicaciones a gran escala usando frameworks de .NET (C#, VB, Entity, Web API), SQL Server y Oracle. También trabajé con NodeJS integrando almacenamiento en la nube de Amazon Web Services.\n\n  El diseño de arquitectura es algo que disfruto mucho porque es una de las etapas más importantes y desafiantes. Mi meta a corto plazo es seguir aprendiendo sobre servicios en la nube (como AWS) para mejorar mi proceso de desarrollo.",
 			frontendDesc: "  En la parte front-end es donde he estado enfocada durante el último par de años. Actualmente estoy trabajando en esta área usando HTML5, CSS3 y Javascript diariamente.\n\n  También estoy trabajando con ReactJS, la cual se ha convertido en una de mis herramientas preferidas en el desarrollo web. En un futuro cercano quiero llevar mis habilidades en CSS3 y Javascript al siguiente nivel mientras aprendo más sobre UI/UX y aplicaciones web progresivas.",
-			more: "  Si a este punto no le maté de aburrimiento y quiere saber más detalles sobre mi experiencia anterior, visite mi perfil de Linked In "
+			more: "  Si a este punto no le maté de aburrimiento y quiere saber más detalles sobre mi experiencia anterior, visite mi perfil de Linked In ",
+			resume: " o puede descargar mi currículum "
 		},
 		contact: {
 			title: 'CONTACTO',
-			content: "¿Tiene algún proyecto en el que le gustaría que participe o quiere ponerse en contacto? Envíeme un mensaje llenando el formuario de abajo y te responderé lo más pronto posible.",
+			content: "¿Tiene algún proyecto en el que le gustaría que participe o quiere ponerse en contacto? Envíeme un mensaje llenando el formuario y responderé lo más pronto posible.",
 			name: "Nombre",
 			subject: "Asunto",
 			message: "Mensaje",
 			required: "requerido",
-			submit: "Enviar"
+			submit: "Enviar Mensaje"
 		},
 		menu: {
 			home: "Inicio",
@@ -86,7 +94,7 @@ export const languages = {
 			link: "Llévame al Inicio"
 		},
 		projects: {			
-			intro: "  Aquí mostraré mis proyectos, pronto agregaré más ejemplos de mi trabajo (prometido). ¡Dale clic a cada tarjeta para girarla!",
+			intro: "  Aquí mostraré mis proyectos, pronto agregaré más ejemplos de mi trabajo (prometido). Dale clic a cada tarjeta para saber más sobre el proyecto.",
 			portfolio: "  Este es un sitio multi-lenguage (el switch de lenguage está en el centro del pie de página) creado con ReactJS, AWS y Firebase una base de datos de Google.\n\n  Es alojado y servido en la infraestructura de Amazon Web Services, el código está publicado en un balde S3 y es servido con más rapidez en América y Europa por CloudFront, la cual es una red de distribución de contenido que mejora muchísimo la velocidad de carga y la seguridad del sitio.",
 			devto: "  He publicado una entrada en dev.to en donde explico un poco el proceso de cómo creé este sitio, si te da curiosidad míralo "
 		},

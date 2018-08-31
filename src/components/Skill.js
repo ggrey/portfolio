@@ -31,7 +31,7 @@ const main = css({
   },
 
   span: {
-    fontWeight: 'bold'
+    fontWeight: '500'
   },
 
   '.stars': {
