@@ -75,7 +75,7 @@ const main = css({
 	
 	'@media all and (min-width: 1690px)': {
 		'.stack': { 
-			width: '65%'
+			width: '50%'
 		},
 
 		h2: {
@@ -93,7 +93,7 @@ const main = css({
 		},
 
 		'.stack': { 
-			width: '65%'
+			width: '50%'
 		},
 
 		'.resume-download': {				
@@ -103,7 +103,7 @@ const main = css({
 
 	'@media all and (min-width: 736px) and (max-width: 1279px)': {
 		'.stack': { 
-			width: '65%'
+			width: '50%'
 		},	
 	}
 });

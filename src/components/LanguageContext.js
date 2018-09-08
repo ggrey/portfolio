@@ -60,7 +60,7 @@ export const languages = {
 			q1: "¿Necesita promover su marca o pequeña empresa?",
 			a1: "\nUn sitio web estático podría ser lo que necesita. Desarrollo rápido y asequible.",
 			q2: "¿Está buscando llevar su negocio al siguiente nivel?",
-			a2: "\nPuedo diseñar una solución web personalizada pensando en los requisitos de su negocio.",
+			a2: "\nPuedo diseñar una solución web personalizada pensando en las necesidades de su negocio.",
 			q3: "¿Tu equipo de desarrolladores necesita una mano extra?",
 			a3: "\nHe trabajado con equipos distribuidos en América y Europa, checa mi experiencia y habilidades.",
 			details: "Diseño & programo Aplicaciones Web"
