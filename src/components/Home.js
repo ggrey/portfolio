@@ -23,8 +23,8 @@ const main = css({
   },
 
   img: {
-    height: '15em',
-    width: '8em'
+    height: '13em',
+    width: '7em'
   },
 
   '.serviceBox': {

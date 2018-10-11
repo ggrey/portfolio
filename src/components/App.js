@@ -34,9 +34,11 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 
+		const lang = window.navigator.language;
+
 		this.state = {
-			language: 'en',
-			langText: languages.en,
+			language: lang.includes('en') ? 'en' : 'es',
+			langText: lang.includes('en') ? languages.en : languages.es,
 			toggleLanguage: this.toggleLanguage
 		}
 	}
