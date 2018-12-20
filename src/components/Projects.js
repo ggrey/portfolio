@@ -3,6 +3,7 @@ import { css } from 'emotion';
 import { LanguageContext } from './LanguageContext';
 import Sample from './Sample';
 import { supportsIntersectionObserver } from '../util';
+import SEO from './SEO';
 
 const main = css({
   label: 'samples',
@@ -45,17 +46,21 @@ const main = css({
 
 const images = [
   {
-    datasrc: 'https://res.cloudinary.com/georginagrey/image/upload/v1532709273/portfolio/portfolio.jpg',
-    src:  'https://res.cloudinary.com/georginagrey/image/upload/c_scale,h_12,w_12/v1532709273/portfolio/portfolio.jpg'
+    datasrc: 'https://res.cloudinary.com/georginagrey/image/upload/v1545095854/portfolio.png',
+    src: 'https://res.cloudinary.com/georginagrey/image/upload/c_scale,h_12,w_12/v1545095854/portfolio.png'
+  },
+  {
+    datasrc: 'https://res.cloudinary.com/georginagrey/image/upload/v1545095977/chicasalfrente.com.png',
+    src: 'https://res.cloudinary.com/georginagrey/image/upload/c_scale,h_12,w_12/v1545095977/chicasalfrente.com.png'
   }
 ]
 
 class Projects extends Component {
 
   componentDidMount() {
-    if(supportsIntersectionObserver()){
+    if (supportsIntersectionObserver()) {
       this.observe();
-    }else{
+    } else {
       const images = Array.from(document.querySelectorAll('img'));
       images.forEach(img => img.src = img.dataset.src);
 
@@ -97,20 +102,36 @@ class Projects extends Component {
   render() {
     return (
       <div id="samples" className={main}>
+        <SEO
+          isBlogPost={false}
+          postData={{
+            description: `This is my portfolio where you'll find some of examples of my work!`,
+            title: 'Georgina Grey | Portfolio',
+            slug: '/'
+          }}
+          postImage={'./assets/georginagrey.png'}
+        />
         <LanguageContext.Consumer>
           {({ langText }) => (
             <section>
               <p>{langText.projects.intro}</p>
-              <Sample frontText='Portfolio' backText={langText.projects.portfolio}>
+              <Sample frontText='georginagrey.com' backText={langText.projects.portfolio} url="https://georginagrey.com">
                 <img
                   data-src={images[0].datasrc}
                   src={images[0].src}
-                  alt="portfolio" 
+                  alt="portfolio"
                 />
               </Sample>
               <p>{langText.projects.devto}
                 <a href="https://dev.to/georginagrey/my-first-portfolio-with-react-and-aws-2g73" target="_blank" rel="noopener noreferrer">{langText.misc.here}.</a>
               </p>
+              <Sample frontText='chicasalfrente.com' backText={langText.projects.caf} url="https://chicasalfrente.com">
+                <img
+                  data-src={images[1].datasrc}
+                  src={images[1].src}
+                  alt="www.chicasalfrente.com"
+                />
+              </Sample>
             </section>
           )}
         </LanguageContext.Consumer>

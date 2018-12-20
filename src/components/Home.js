@@ -4,6 +4,7 @@ import { LanguageContext } from './LanguageContext';
 import { color } from './Theme';
 import me from '../assets/grey.svg';
 import ServiceBox from './ServiceBox';
+import SEO from './SEO';
 
 const main = css({
   label: 'home',
@@ -175,6 +176,15 @@ class Home extends Component {
   render() {
     return (
       <div id="home" className={main}>
+        <SEO
+          isBlogPost={false}
+          postData={{
+            description: `I'm a Web Developer focused on making Web Applications that load fast, look good and are easy to use.`,
+            title: 'Georgina Grey | Full-Stack Web Developer',
+            slug: '/'
+          }}
+          postImage={'./assets/georginagrey.png'}
+        />
         <LanguageContext.Consumer>
           {({ langText: lang }) => (
             <section>

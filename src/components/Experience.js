@@ -3,6 +3,7 @@ import { css } from 'emotion';
 import { LanguageContext } from './LanguageContext';
 import { color, yellow } from './Theme';
 import Skill from './Skill';
+import SEO from './SEO';
 
 const main = css({
 	label: 'experience',
@@ -61,7 +62,7 @@ const main = css({
 	'.stack': {
 		borderTop: `1px dashed ${yellow}`,
 		borderBottom: `1px dashed ${yellow}`,
-    boxShadow: `inset 0 -1px 0 0 ${yellow}, inset 0 1px 0 0 ${yellow}, 0 1px 0 0 ${yellow}, 0 -1px 0 0 ${yellow}`,
+		boxShadow: `inset 0 -1px 0 0 ${yellow}, inset 0 1px 0 0 ${yellow}, 0 1px 0 0 ${yellow}, 0 -1px 0 0 ${yellow}`,
 		padding: '0.5em 0',
 		margin: '1.5em auto',
 		background: '#0000002b'
@@ -72,9 +73,9 @@ const main = css({
 		margin: '0 0 0 1.5em',
 		padding: '0'
 	},
-	
+
 	'@media all and (min-width: 1690px)': {
-		'.stack': { 
+		'.stack': {
 			width: '50%'
 		},
 
@@ -92,19 +93,19 @@ const main = css({
 			letterSpacing: '0.2em'
 		},
 
-		'.stack': { 
+		'.stack': {
 			width: '50%'
 		},
 
-		'.resume-download': {				
+		'.resume-download': {
 			right: '10em',
-		}		
+		}
 	},
 
 	'@media all and (min-width: 736px) and (max-width: 1279px)': {
-		'.stack': { 
+		'.stack': {
 			width: '50%'
-		},	
+		},
 	}
 });
 
@@ -124,11 +125,19 @@ class Experience extends Component {
 				stars: ['on', 'on', 'on', 'on', 'off']
 			},
 			{
+				title: 'Firebase/Firestore',
+				stars: ['on', 'on', 'on', 'off', 'off']
+			},
+			{
 				title: 'Oracle',
 				stars: ['on', 'on', 'on', 'off', 'off']
-			},			
+			},
 			{
 				title: 'AWS',
+				stars: ['on', 'on', 'off', 'off', 'off']
+			},
+			{
+				title: 'GraphQL',
 				stars: ['on', 'on', 'off', 'off', 'off']
 			},
 		]
@@ -148,35 +157,52 @@ class Experience extends Component {
 			},
 			{
 				title: 'ReactJS',
+				stars: ['on', 'on', 'on', 'on', 'off']
+			},
+			{
+				title: 'GatsbyJS',
+				stars: ['on', 'on', 'on', 'on', 'off']
+			},
+			{
+				title: 'Angular',
 				stars: ['on', 'on', 'on', 'off', 'off']
-			}
+			},
 		]
 		return (
 			<section id="experience" className={main} >
+				<SEO
+					isBlogPost={false}
+					postData={{
+						description: `Checkout my skills, experience and download my resume!`,
+						title: 'Georgina Grey | Experience',
+						slug: '/'
+					}}
+					postImage={'./assets/georginagrey.png'}
+				/>
 				<LanguageContext.Consumer>
 					{({ langText }) => (
 						<section className="experience-content">
-							<blockquote >{langText.experience.quote}<span>Patrick McKenzie</span></blockquote>						
+							<blockquote >{langText.experience.quote}<span>Patrick McKenzie</span></blockquote>
 							<p>{langText.experience.intro}</p>
-							
+
 							<h2 className="backend">BACK-END</h2>
-							<p>{langText.experience.backendDesc}</p>							
-							<section className="stack">								
+							<p>{langText.experience.backendDesc}</p>
+							<section className="stack">
 								<Skill skills={beSkills} side="be" />
 							</section>
 
 							<h2 className="frontend">FRONT-END</h2>
-							<p>{langText.experience.frontendDesc}</p>							
+							<p>{langText.experience.frontendDesc}</p>
 							<section className="stack">
 								<Skill skills={feSkills} side="fe" />
-							</section>			
+							</section>
 
 							<p>
 								{langText.experience.more}
 								<a href="https://www.linkedin.com/in/georginagrey" target="_blank" rel="noopener noreferrer">{langText.misc.here}</a>
 								{langText.experience.resume}
 								<a href="https://s3.amazonaws.com/georginagrey-util/Georgina+Grey+-+Web+Dev.pdf" target="_blank" rel="noopener noreferrer">{langText.misc.here}.</a>
-							</p>				
+							</p>
 						</section>
 					)}
 				</LanguageContext.Consumer>

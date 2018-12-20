@@ -6,6 +6,7 @@ const main = css({
   label: 'sample',
   display: 'flex',
   justifyContent: 'center',
+  cursor: 'pointer',
 
   '.flip-container': {
     perspective: '1000px'
@@ -21,7 +22,7 @@ const main = css({
 
   '.flip-container, .front, .back': {
     width: '90vw',
-    height: '25em'
+    height: '80vh'
   },
 
   '.flipper': {
@@ -51,7 +52,8 @@ const main = css({
     transform: 'rotateY(180deg)',
     background: '#333',
     padding: '0 0.5em',
-    border: '2px solid #32678b'
+    border: '2px solid #32678b',
+    fontSize: '0.8em'
   },
 
   img: {
@@ -60,15 +62,18 @@ const main = css({
     objectFit: 'cover',
   },
 
-  h2: {
+  h3: {
     color: '#333',
-    textTransform: 'uppercase',
-    letterSpacing: '3px'
+    // textTransform: 'uppercase',
+    letterSpacing: '2px',
+    textDecoration: 'underline solid',
+    textDecorationSkipInk: 'none'
   },
 
   '@media all and (min-width: 1280px)': {
     '.flip-container, .front, .back': {
       width: '20vw',
+      height: '70vh'
     },
 
     p: {
@@ -79,6 +84,7 @@ const main = css({
   '@media all and (min-width: 736px) and (max-width: 1279px)': {
     '.flip-container, .front, .back': {
       width: '35vw',
+      height: '70vh'
     },
   }
 });
@@ -89,7 +95,7 @@ class Sample extends Component {
   }
 
   flip = () => {
-    this.setState({ flip: !this.state.flip});
+    this.setState({ flip: !this.state.flip });
   }
 
   render() {
@@ -99,7 +105,9 @@ class Sample extends Component {
           <div className="flipper">
             <div className="front">
               {this.props.children}
-              <h2>{this.props.frontText}</h2>
+              <a href={this.props.url} target="_blank" rel="noopener noreferrer">
+                <h3>{this.props.frontText}</h3>
+              </a>
             </div>
             <div className="back">
               <p>{this.props.backText}</p>

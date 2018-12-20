@@ -4,6 +4,7 @@ import { LanguageContext } from './LanguageContext';
 import { color } from './Theme';
 import base from '../base';
 import ReCAPTCHA from 'react-google-recaptcha';
+import SEO from './SEO';
 
 const main = css({
 	display: 'flex',
@@ -76,7 +77,7 @@ const main = css({
 				marginRight: '0.3em'
 			}
 		}
-		
+
 	},
 
 	'@media all and (min-width: 1280px) and (max-width: 2299px)': {
@@ -178,55 +179,66 @@ class Contact extends Component {
 
 	render() {
 		return (
-			<LanguageContext.Consumer>
-				{({ langText, language }) => (
-					<section id="contact" className={main}>
-						<p>{langText.contact.content}</p>
-						<form className="contact-input" onSubmit={this.handleSubmit.bind(this)}>
-							<div className="name-email">
-								<input
-									type="text"
-									name="name"
-									placeholder={`${langText.contact.name} (${langText.contact.required})`}
-									autoComplete="name"
-									onChange={this.handleChange}
-									value={this.state.name}
-									className={this.state.errors.name ? "input-error" : ""} />
-								<input type="email"
-									name="email"
-									placeholder={`Email (${langText.contact.required})`}
-									autoComplete="email"
-									onChange={this.handleChange}
-									value={this.state.email}
-									className={this.state.errors.email ? "input-error" : ""} />
-							</div>
+			<React.Fragment>
+				<SEO
+					isBlogPost={false}
+					postData={{
+						description: `Do you have a project you'd want me to jump in or want to get in touch? Shoot me a message filling the form below and I'll get back to you as soon as I can.`,
+						title: 'Georgina Grey | Contact Me',
+						slug: '/'
+					}}
+					postImage={'./assets/georginagrey.png'}
+				/>
+				<LanguageContext.Consumer>
+					{({ langText, language }) => (
+						<section id="contact" className={main}>
+							<p>{langText.contact.content}</p>
+							<form className="contact-input" onSubmit={this.handleSubmit.bind(this)}>
+								<div className="name-email">
+									<input
+										type="text"
+										name="name"
+										placeholder={`${langText.contact.name} (${langText.contact.required})`}
+										autoComplete="name"
+										onChange={this.handleChange}
+										value={this.state.name}
+										className={this.state.errors.name ? "input-error" : ""} />
+									<input type="email"
+										name="email"
+										placeholder={`Email (${langText.contact.required})`}
+										autoComplete="email"
+										onChange={this.handleChange}
+										value={this.state.email}
+										className={this.state.errors.email ? "input-error" : ""} />
+								</div>
 
-							<input type="text"
-								name="subject"
-								placeholder={langText.contact.subject}
-								value={this.state.subject}
-								onChange={this.handleChange} />
+								<input type="text"
+									name="subject"
+									placeholder={langText.contact.subject}
+									value={this.state.subject}
+									onChange={this.handleChange} />
 
-							<textarea
-								rows="5"
-								name="message"
-								placeholder={`${langText.contact.message} (${langText.contact.required})`}
-								onChange={this.handleChange}
-								value={this.state.message}
-								className={this.state.errors.message ? "input-error" : ""}>
-							</textarea>
-							<button className={this.state.submitDisabled ? "disabled" : ""} disabled={this.state.submitDisabled} type="submit">{langText.contact.submit}</button>
-						</form>
-						<ReCAPTCHA
-							className="captcha"
-							sitekey="6Ld7ZWgUAAAAAMxNCbZTQMNfAjLVA9thKVsCS8T5"
-							theme="dark"
-							onChange={this.onCaptchaChange}
-							lang="en"
-						/>
-					</section>
-				)}
-			</LanguageContext.Consumer>
+								<textarea
+									rows="5"
+									name="message"
+									placeholder={`${langText.contact.message} (${langText.contact.required})`}
+									onChange={this.handleChange}
+									value={this.state.message}
+									className={this.state.errors.message ? "input-error" : ""}>
+								</textarea>
+								<button className={this.state.submitDisabled ? "disabled" : ""} disabled={this.state.submitDisabled} type="submit">{langText.contact.submit}</button>
+							</form>
+							<ReCAPTCHA
+								className="captcha"
+								sitekey="6Ld7ZWgUAAAAAMxNCbZTQMNfAjLVA9thKVsCS8T5"
+								theme="dark"
+								onChange={this.onCaptchaChange}
+								lang="en"
+							/>
+						</section>
+					)}
+				</LanguageContext.Consumer>
+			</React.Fragment>
 		)
 	}
 }
