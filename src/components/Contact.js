@@ -4,7 +4,6 @@ import { LanguageContext } from './LanguageContext';
 import { color } from './Theme';
 import base from '../base';
 import ReCAPTCHA from 'react-google-recaptcha';
-import SEO from './SEO';
 
 const main = css({
 	display: 'flex',
@@ -180,15 +179,6 @@ class Contact extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<SEO
-					isBlogPost={false}
-					postData={{
-						description: `Do you have a project you'd want me to jump in or want to get in touch? Shoot me a message filling the form below and I'll get back to you as soon as I can.`,
-						title: 'Georgina Grey | Contact Me',
-						slug: '/'
-					}}
-					postImage={'./assets/georginagrey.png'}
-				/>
 				<LanguageContext.Consumer>
 					{({ langText, language }) => (
 						<section id="contact" className={main}>

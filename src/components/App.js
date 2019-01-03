@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Helmet from 'react-helmet';
 import { css } from 'emotion';
 import Menu from './Menu';
 import Footer from './Footer';
@@ -54,7 +53,7 @@ class App extends Component {
 	render() {
 		return (
 			<div id="wrapper" className={wrapper}>
-				<Helmet
+				{/* <Helmet
 					title="Georgina Grey"
 					meta={[
 						{ name: 'description', content: 'Georgina Grey | Full-Stack Web Developer' },
@@ -63,7 +62,7 @@ class App extends Component {
 					link={[
 						{ rel: 'shortcut icon', type: 'image/png', href: '../public/favicon.ico' }
 					]}
-				/>
+				/> */}
 				<LanguageContext.Provider value={this.state}>
 					<div id="app" className={app}>
 						<Menu />

@@ -3,7 +3,6 @@ import { css } from 'emotion';
 import { LanguageContext } from './LanguageContext';
 import { color, yellow } from './Theme';
 import Skill from './Skill';
-import SEO from './SEO';
 
 const main = css({
 	label: 'experience',
@@ -170,15 +169,6 @@ class Experience extends Component {
 		]
 		return (
 			<section id="experience" className={main} >
-				<SEO
-					isBlogPost={false}
-					postData={{
-						description: `Checkout my skills, experience and download my resume!`,
-						title: 'Georgina Grey | Experience',
-						slug: '/'
-					}}
-					postImage={'./assets/georginagrey.png'}
-				/>
 				<LanguageContext.Consumer>
 					{({ langText }) => (
 						<section className="experience-content">

@@ -3,7 +3,6 @@ import { css } from 'emotion';
 import { LanguageContext } from './LanguageContext';
 import Sample from './Sample';
 import { supportsIntersectionObserver } from '../util';
-import SEO from './SEO';
 
 const main = css({
   label: 'samples',
@@ -102,15 +101,6 @@ class Projects extends Component {
   render() {
     return (
       <div id="samples" className={main}>
-        <SEO
-          isBlogPost={false}
-          postData={{
-            description: `This is my portfolio where you'll find some of examples of my work!`,
-            title: 'Georgina Grey | Portfolio',
-            slug: '/'
-          }}
-          postImage={'./assets/georginagrey.png'}
-        />
         <LanguageContext.Consumer>
           {({ langText }) => (
             <section>

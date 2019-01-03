@@ -53,7 +53,7 @@ const main = css({
     background: '#333',
     padding: '0 0.5em',
     border: '2px solid #32678b',
-    fontSize: '0.8em'
+    fontSize: '0.9em'
   },
 
   img: {

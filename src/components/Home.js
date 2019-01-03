@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { css } from 'emotion';
+import Helmet from 'react-helmet';
 import { LanguageContext } from './LanguageContext';
 import { color } from './Theme';
 import me from '../assets/grey.svg';
 import ServiceBox from './ServiceBox';
-import SEO from './SEO';
 
 const main = css({
   label: 'home',
@@ -176,15 +176,12 @@ class Home extends Component {
   render() {
     return (
       <div id="home" className={main}>
-        <SEO
-          isBlogPost={false}
-          postData={{
-            description: `I'm a Web Developer focused on making Web Applications that load fast, look good and are easy to use.`,
-            title: 'Georgina Grey | Full-Stack Web Developer',
-            slug: '/'
-          }}
-          postImage={'./assets/georginagrey.png'}
-        />
+          <Helmet>
+            <title>Georgina Grey | Web Developer</title>
+            <meta name="og:title" property="og:title" content="Georgina Grey | Web Developer" />
+            <meta name="og:description" property="og:description" content="I'm a Web Developer with 6+ years of experience focused on making Web Applications that load fast, look good and are easy to use." />
+            <meta name="og:image" property="og:image" content="https://res.cloudinary.com/georginagrey/image/upload/v1546544471/georginagrey.png" />
+          </Helmet>
         <LanguageContext.Consumer>
           {({ langText: lang }) => (
             <section>
