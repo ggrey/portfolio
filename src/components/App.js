@@ -34,7 +34,7 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 
-		const lang = window.navigator.language;
+		const lang = localStorage.getItem('lang') || window.navigator.language;
 
 		this.state = {
 			language: lang.includes('en') ? 'en' : 'es',
@@ -48,6 +48,8 @@ class App extends Component {
 		language = language === 'en' ? 'es' : 'en';
 		langText = languages[language];
 		this.setState({ language, langText });
+
+		localStorage.setItem('lang', language);
 	}
 
 	render() {
