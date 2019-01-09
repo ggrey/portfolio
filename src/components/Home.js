@@ -179,7 +179,7 @@ class Home extends Component {
           <Helmet>
             <title>Georgina Grey | Web Developer</title>
             <meta name="og:title" property="og:title" content="Georgina Grey | Web Developer" />
-            <meta name="og:description" property="og:description" content="I'm a Web Developer with 6+ years of experience focused on making Web Applications that load fast, look good and are easy to use." />
+            <meta name="og:description" property="og:description" content="I'm a Web Developer with 7+ years of experience focused on making Web Applications that load fast, look good and are easy to use." />
             <meta name="og:image" property="og:image" content="https://res.cloudinary.com/georginagrey/image/upload/v1546544471/georginagrey.png" />
           </Helmet>
         <LanguageContext.Consumer>
