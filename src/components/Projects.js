@@ -32,11 +32,6 @@ const main = css({
     margin: '2em auto 1.5em auto'
   },
 
-  h5: {
-    textAlign: 'center',
-    margin: 0
-  },
-
   ul: {
     display: 'flex',
     justifyContent: 'space-evenly',
@@ -63,25 +58,39 @@ const main = css({
     },
   },
 
-  '.caf': {
-    display: 'flex',
-    alignItems: 'center',
+  '.header': {
+    background: '#3A3838',
+    paddingBottom: '1em'
+  },
 
-    img: {
-      width: 150,
-      height: 150
-    }
+  '.caf': {
+    textAlign: 'center'
   },
 
   '.img-holder': {
     width: '100%',
+    background: 'rgb(0,0,0,.2)',
+    border: `1px solid ${color}`,
+
     '& img': {
+      padding: '1em',
       width: '100%'
     }
   },
 
   '.caf-url': {
     textAlign: 'center'
+  },
+
+  h5: {
+    background: color,
+    color: '#000',
+    textAlign: 'center',
+    margin: 0
+  },
+
+  p: {
+    padding: '1.5em'
   }
 });
 
@@ -150,20 +159,16 @@ class Projects extends Component {
 
           {({ langText }) => (
             <section>
-              {/* <p>{langText.projects.intro}</p> */}
-              <h1>Chicas al Frente</h1>
-              <div className="caf-url">
-                <a href="https://chicasalfrente.com" target="_blank" rel="noopener noreferrer">www.chicasalfrente.com</a>              
-              </div>              
-              <div className="caf">
-                <img
-                  data-src={images[1].datasrc}
-                  src={images[1].src}
-                  alt="www.chicasalfrente.com"
-                />
-                <h4>{langText.projects.caf.about}</h4>
+              <div className="header">
+                <h1>Chicas al Frente</h1>
+                <div className="caf-url">
+                  <a href="https://chicasalfrente.com" target="_blank" rel="noopener noreferrer">www.chicasalfrente.com</a>
+                </div>
+                <br />
+                <div className="caf">
+                  <span>{langText.projects.caf.about}</span>
+                </div>
               </div>
-              <p>{langText.projects.caf.role}</p>
               <div className="img-holder">
                 <a href={images[2].datasrc} target="_blank" rel="noopener noreferrer">
                   <img
@@ -174,7 +179,8 @@ class Projects extends Component {
                 </a>
               </div>
               <h5>Home Page</h5>
-              <p>{langText.projects.caf.ref}</p>              
+
+              <p>{langText.projects.caf.ref}</p>
               <div className="img-holder">
                 <a href={images[0].datasrc} target="_blank" rel="noopener noreferrer">
                   <img
@@ -184,17 +190,21 @@ class Projects extends Component {
                   />
                 </a>
               </div>
-              <h5>Economic Feminist Network</h5>
+              <h5>Feminist Economic Network</h5>
               <p>{langText.projects.caf.desc}</p>
 
-              <h1>Portfolio</h1>
+              <div className="header">
+                <h1>Portfolio</h1>
+                <div className="caf-url">
+                  <a href="https://georginagrey.com" target="_blank" rel="noopener noreferrer">www.georginagrey.com</a>
+                </div>
+              </div>
               <p>
                 {langText.projects.portfolio}
-              </p>
-              <p>{langText.projects.devto}
+                <br /><br />
+                {langText.projects.devto}
                 <a href="https://dev.to/georginagrey/my-first-portfolio-with-react-and-aws-2g73" target="_blank" rel="noopener noreferrer">{langText.misc.here}.</a>
               </p>
-
             </section>
           )}
         </LanguageContext.Consumer>
