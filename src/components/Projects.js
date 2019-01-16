@@ -27,7 +27,7 @@ const main = css({
   'h1::before': {
     content: "''",
     display: 'block',
-    width: '6em',
+    width: '100%',
     borderTop: 'solid 1px',
     margin: '2em auto 1.5em auto'
   },
@@ -169,6 +169,7 @@ class Projects extends Component {
                   <span>{langText.projects.caf.about}</span>
                 </div>
               </div>
+              <p>{langText.projects.caf.refAbout}</p>
               <div className="img-holder">
                 <a href={images[2].datasrc} target="_blank" rel="noopener noreferrer">
                   <img
@@ -178,9 +179,8 @@ class Projects extends Component {
                   />
                 </a>
               </div>
-              <h5>Home Page</h5>
-
-              <p>{langText.projects.caf.ref}</p>
+              <h5>{langText.projects.caf.home}</h5>         
+              <p>{langText.projects.caf.desc}</p>     
               <div className="img-holder">
                 <a href={images[0].datasrc} target="_blank" rel="noopener noreferrer">
                   <img
@@ -190,8 +190,8 @@ class Projects extends Component {
                   />
                 </a>
               </div>
-              <h5>Feminist Economic Network</h5>
-              <p>{langText.projects.caf.desc}</p>
+              <h5>{langText.projects.caf.ref}</h5>
+              
 
               <div className="header">
                 <h1>Portfolio</h1>
