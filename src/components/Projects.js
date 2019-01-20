@@ -19,7 +19,7 @@ const main = css({
   'h1': {
     color: color,
     textTransform: 'uppercase',
-    letterSpacing: 2,
+    
     fontSize: '1.8em',
     textAlign: 'center'
   },
@@ -91,6 +91,44 @@ const main = css({
 
   p: {
     padding: '1.5em'
+  },
+
+  blockquote: {
+		fontSize: '0.9em',
+		width: '100%',
+		margin: '1em auto',
+		fontStyle: 'italic',
+		fontWeight: '500',
+		padding: '0.5em 1.2em 0',
+		borderLeft: `2px solid ${color}`,
+		position: 'relative'
+	},
+
+	'blockquote::before': {
+		fontFamily: 'Arial',
+		content: "'\\201C'",
+		color: color,
+		fontSize: '2.3em',
+		position: 'absolute',
+		left: '2px',
+		top: '0px'
+	},
+
+	'blockquote span': {
+		display: 'block',
+		fontStyle: 'normal',
+		marginTop: '1em',
+		fontWeight: 'normal'
+  },
+  
+  '.testimonial': {
+    padding: '2em',
+    h2: {
+      textAlign: 'center',
+      color: color,
+      textTransform: 'uppercase',
+      letterSpacing: 2,
+    }
   }
 });
 
@@ -179,8 +217,8 @@ class Projects extends Component {
                   />
                 </a>
               </div>
-              <h5>{langText.projects.caf.home}</h5>         
-              <p>{langText.projects.caf.desc}</p>     
+              <h5>{langText.projects.caf.home}</h5>
+              <p>{langText.projects.caf.desc}</p>
               <div className="img-holder">
                 <a href={images[0].datasrc} target="_blank" rel="noopener noreferrer">
                   <img
@@ -191,7 +229,11 @@ class Projects extends Component {
                 </a>
               </div>
               <h5>{langText.projects.caf.ref}</h5>
-              
+              <div className="testimonial">
+                <h2>{langText.misc.testimonial}</h2>
+                <blockquote>{langText.projects.caf.testimonial}<span>Rocío Jiménez</span></blockquote>
+              </div>
+              <div>Blog post: <a href="https://dev.to/georginagrey/how-i-leveraged-jamstack-to-cut-down-costs-for-a-nonprofit-76f" target="_blank" rel="noopener noreferrer">{langText.projects.caf.devto}</a></div>
 
               <div className="header">
                 <h1>Portfolio</h1>
