@@ -122,7 +122,6 @@ const main = css({
   },
   
   '.testimonial': {
-    padding: '2em',
     h2: {
       textAlign: 'center',
       color: color,
