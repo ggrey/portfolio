@@ -19,7 +19,7 @@ const main = css({
   'h1': {
     color: color,
     textTransform: 'uppercase',
-    
+
     fontSize: '1.8em',
     textAlign: 'center'
   },
@@ -60,11 +60,13 @@ const main = css({
 
   '.header': {
     background: '#3A3838',
-    paddingBottom: '1em'
+    paddingBottom: '1em',
+    lineHeight: '1em'
   },
 
   '.caf': {
-    textAlign: 'center'
+    textAlign: 'center',
+    fontSize: '0.9em'
   },
 
   '.img-holder': {
@@ -94,33 +96,33 @@ const main = css({
   },
 
   blockquote: {
-		fontSize: '0.9em',
-		width: '100%',
-		margin: '1em auto',
-		fontStyle: 'italic',
-		fontWeight: '500',
-		padding: '0.5em 1.2em 0',
-		borderLeft: `2px solid ${color}`,
-		position: 'relative'
-	},
-
-	'blockquote::before': {
-		fontFamily: 'Arial',
-		content: "'\\201C'",
-		color: color,
-		fontSize: '2.3em',
-		position: 'absolute',
-		left: '2px',
-		top: '0px'
-	},
-
-	'blockquote span': {
-		display: 'block',
-		fontStyle: 'normal',
-		marginTop: '1em',
-		fontWeight: 'normal'
+    fontSize: '0.9em',
+    width: '100%',
+    margin: '1em auto',
+    fontStyle: 'italic',
+    fontWeight: '500',
+    padding: '0.5em 1.2em 0',
+    borderLeft: `2px solid ${color}`,
+    position: 'relative'
   },
-  
+
+  'blockquote::before': {
+    fontFamily: 'Arial',
+    content: "'\\201C'",
+    color: color,
+    fontSize: '2.3em',
+    position: 'absolute',
+    left: '2px',
+    top: '0px'
+  },
+
+  'blockquote span': {
+    display: 'block',
+    fontStyle: 'normal',
+    marginTop: '1em',
+    fontWeight: 'normal'
+  },
+
   '.testimonial': {
     marginTop: '3em',
 
@@ -129,6 +131,33 @@ const main = css({
       color: color,
       textTransform: 'uppercase',
       letterSpacing: 2,
+    }
+  },
+
+  '.project-wrapper': {
+    background: 'rgb(44, 62, 80, .5)'
+  },
+
+  '.tech': {
+    display: 'flex',
+    justifyContent: 'center',
+    marginTop: '.5em',
+
+    span: {
+      margin: '0 .4em',
+      color: '#77cdf0'
+    }
+  },
+
+  '@media all and (min-width: 736px)': {
+    '.img-holder': {
+      width: '85%',
+      margin: '0 auto'
+    },
+
+    h5: {
+      width: '85%',
+      margin: '0 auto'
     }
   }
 });
@@ -198,56 +227,71 @@ class Projects extends Component {
 
           {({ langText }) => (
             <section>
-              <div className="header">
-                <h1>Chicas al Frente</h1>
-                <div className="caf-url">
-                  <a href="https://chicasalfrente.com" target="_blank" rel="noopener noreferrer">www.chicasalfrente.com</a>
+              <div className="project-wrapper">
+                <div className="header">
+                  <h1>Chicas al Frente</h1>
+                  <div className="caf-url">
+                    <a href="https://chicasalfrente.com" target="_blank" rel="noopener noreferrer">www.chicasalfrente.com</a>
+                  </div>
+                  <br />
+                  <div className="caf">
+                    <span>{langText.projects.caf.about}</span>
+                  </div>
+                  <div className="tech">
+                    <span>#gatsbyjs</span>
+                    <span>#netlify</span>
+                    <span>#firebase</span>
+                    <span>#pwa</span>
+                  </div>
                 </div>
-                <br />
-                <div className="caf">
-                  <span>{langText.projects.caf.about}</span>
+                <p>{langText.projects.caf.refAbout}</p>
+                <div className="img-holder">
+                  <a href={images[2].datasrc} target="_blank" rel="noopener noreferrer">
+                    <img
+                      data-src={images[2].datasrc}
+                      src={images[2].src}
+                      alt="www.chicasalfrente.com"
+                    />
+                  </a>
                 </div>
-              </div>
-              <p>{langText.projects.caf.refAbout}</p>
-              <div className="img-holder">
-                <a href={images[2].datasrc} target="_blank" rel="noopener noreferrer">
-                  <img
-                    data-src={images[2].datasrc}
-                    src={images[2].src}
-                    alt="www.chicasalfrente.com"
-                  />
-                </a>
-              </div>
-              <h5>{langText.projects.caf.home}</h5>
-              <p>{langText.projects.caf.desc}</p>
-              <div className="img-holder">
-                <a href={images[0].datasrc} target="_blank" rel="noopener noreferrer">
-                  <img
-                    data-src={images[0].datasrc}
-                    src={images[0].src}
-                    alt="www.chicasalfrente.com"
-                  />
-                </a>
-              </div>
-              <h5>{langText.projects.caf.ref}</h5>
-              <div className="testimonial">
-                <h2>{langText.misc.testimonial}</h2>
-                <blockquote>{langText.projects.caf.testimonial}<span>Rocío Jiménez</span></blockquote>
-              </div>
-              <div>Blog post: <a href="https://dev.to/georginagrey/how-i-leveraged-jamstack-to-cut-down-costs-for-a-nonprofit-76f" target="_blank" rel="noopener noreferrer">{langText.projects.caf.devto}</a></div>
+                <h5>{langText.projects.caf.home}</h5>
+                <p>{langText.projects.caf.desc}</p>
+                <div className="img-holder">
+                  <a href={images[0].datasrc} target="_blank" rel="noopener noreferrer">
+                    <img
+                      data-src={images[0].datasrc}
+                      src={images[0].src}
+                      alt="www.chicasalfrente.com"
+                    />
+                  </a>
+                </div>
+                <h5>{langText.projects.caf.ref}</h5>
+                <div className="testimonial">
+                  <h2>{langText.misc.testimonial}</h2>
+                  <blockquote>{langText.projects.caf.testimonial}<span>Rocío Jiménez</span></blockquote>
+                </div>
+                <div>Blog post: <a href="https://dev.to/georginagrey/how-i-leveraged-jamstack-to-cut-down-costs-for-a-nonprofit-76f" target="_blank" rel="noopener noreferrer">{langText.projects.caf.devto}</a></div>
 
-              <div className="header">
-                <h1>Portfolio</h1>
-                <div className="caf-url">
-                  <a href="https://georginagrey.com" target="_blank" rel="noopener noreferrer">www.georginagrey.com</a>
-                </div>
               </div>
-              <p>
-                {langText.projects.portfolio}
-                <br /><br />
-                {langText.projects.devto}
-                <a href="https://dev.to/georginagrey/my-first-portfolio-with-react-and-aws-2g73" target="_blank" rel="noopener noreferrer">{langText.misc.here}.</a>
-              </p>
+              <div className="project-wrapper">
+                <div className="header">
+                  <h1>Portfolio</h1>
+                  <div className="caf-url">
+                    <a href="https://georginagrey.com" target="_blank" rel="noopener noreferrer">www.georginagrey.com</a>
+                  </div>
+                  <div className="tech">
+                    <span>#reactjs</span>
+                    <span>#aws</span>
+                    <span>#firebase</span>
+                  </div>
+                </div>
+                <p>
+                  {langText.projects.portfolio}
+                  <br /><br />
+                  {langText.projects.devto}
+                  <a href="https://dev.to/georginagrey/my-first-portfolio-with-react-and-aws-2g73" target="_blank" rel="noopener noreferrer">{langText.misc.here}.</a>
+                </p>
+              </div>
             </section>
           )}
         </LanguageContext.Consumer>
